@@ -1,0 +1,17 @@
+问题1 缺少tools文件.位置 app.main.views.py 
+from ..tools import generate_id  没有这个文件
+
+问题2 windows下无法运行.
+D:\SVN\06_source\python\StoryBlog\venv\Scripts\python.exe D:/SVN/06_source/python/StoryBlog/manage.py
+Traceback (most recent call last):
+  File "D:/SVN/06_source/python/StoryBlog/manage.py", line 2, in <module>
+    from app import create_app, db
+  File "D:\SVN\06_source\python\StoryBlog\app\__init__.py", line 5, in <module>
+    from config import config
+  File "D:\SVN\06_source\python\StoryBlog\config.py", line 12, in <module>
+    os.getenv('HOME'), 'log/flask/log_{}.log'.format(strftime('%Y%m%d')))
+  File "D:\python3\lib\ntpath.py", line 76, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+Process finished with exit code 1
